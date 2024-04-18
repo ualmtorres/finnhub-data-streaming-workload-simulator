@@ -9,7 +9,8 @@ with open('config.json', 'r') as f:
 
 # define the consumer to read from the Kafka topic
 
-kafka_servers=["192.168.65.1:29092","192.168.65.1:29093","192.168.65.1:29094"]
+# define kafka servers from the config file (KAFKA_SERVER variable)
+kafka_servers=[config['KAFKA_SERVER'] + config['KAFKA_PORT']
 consumer = KafkaConsumer(
     config['KAFKA_TOPIC_NAME'],
     bootstrap_servers = kafka_servers,

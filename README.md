@@ -1,1 +1,1 @@
-# kafka-kafdrop-example-ha
+# finnhub-data-streaming-workload-simulator

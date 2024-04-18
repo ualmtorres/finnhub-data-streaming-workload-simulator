@@ -22,7 +22,7 @@ class FinnhubProducer:
         #self.producer = KafkaProducer(bootstrap_servers=f"{self.config['KAFKA_SERVER']}:{self.config['KAFKA_PORT']}",api_version=(0, 10, 1))
 
 
-        kafka_servers=["192.168.65.1:29092","192.168.65.1:29093","192.168.65.1:29094"]
+        kafka_servers=[config['KAFKA_SERVER'] + config['KAFKA_PORT']
         self.producer = KafkaProducer(bootstrap_servers = kafka_servers,api_version=(0, 10, 1))
         
         # define the avro schema here. This assumes the schema is already defined in the src/schemas folder
